@@ -30,7 +30,7 @@ const CustomerOrder = () => {
         }
         else {
             const addingOrder = { ...loggedInUser, ...addService, ...newOrder };
-            fetch('http://localhost:5000/customerorder', {
+            fetch('https://quiet-garden-14775.herokuapp.com/customerorder', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(addingOrder)

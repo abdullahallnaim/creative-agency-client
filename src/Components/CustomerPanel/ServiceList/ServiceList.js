@@ -12,7 +12,7 @@ const ServiceList = () => {
     const [loggedInUser, setLoggedInUser] = loggedIn;
     const [showOrder, setShowData] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/getorderinfo?email=' + loggedInUser.email)
+        fetch('https://quiet-garden-14775.herokuapp.com/getorderinfo?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => setShowData(data))
 

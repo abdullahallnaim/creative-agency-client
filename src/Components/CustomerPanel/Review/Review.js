@@ -35,7 +35,7 @@ const Review = () => {
             reviewData.append('companyName', reviewInfo.companyName);
             reviewData.append('description', reviewInfo.description);
             console.log(reviewData.file)
-            fetch('http://localhost:5000/customerreview', {
+            fetch('https://quiet-garden-14775.herokuapp.com/customerreview', {
                 method: 'POST',
                 body: reviewData
             })

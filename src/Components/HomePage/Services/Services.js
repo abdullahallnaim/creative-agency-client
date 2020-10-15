@@ -17,7 +17,7 @@ const Services = () => {
     const [addService, setAddService] = services
     const [showAddedServices, setShowAddedServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/getaddedservices')
+        fetch('https://quiet-garden-14775.herokuapp.com/getaddedservices')
             .then(res => res.json())
             .then(data => setShowAddedServices(data))
     }, [])

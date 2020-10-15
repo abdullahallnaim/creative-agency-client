@@ -6,9 +6,9 @@ import nophoto from '../../../profilenone.jpg'
 const ClientsFeedBack = () => {
     const [showReviewData, setShowReviewData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/getreviewdata')
+        fetch('https://quiet-garden-14775.herokuapp.com/getreviewdata')
             .then(res => res.json())
-            .then(data =>setShowReviewData(data))
+            .then(data => setShowReviewData(data))
     }, [])
     return (
         <div className="" style={{ marginTop: '90px' }}>

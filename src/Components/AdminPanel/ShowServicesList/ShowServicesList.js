@@ -12,10 +12,9 @@ const ShowServicesList = () => {
     const [loggedInUser, setLoggedInUser] = loggedIn;
     const [showOrder, setShowData] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/customersorderinfo')
+        fetch('https://quiet-garden-14775.herokuapp.com/customersorderinfo')
             .then(res => res.json())
             .then(data => setShowData(data))
-
     }, [])
     return (
         <>

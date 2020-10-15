@@ -19,7 +19,7 @@ const AdminLogin = () => {
     const { from } = location.state || { from: { pathname: `/admin` } };
     const [getAdminInfo, setGetAdminInfo] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/adminaccess')
+        fetch('https://quiet-garden-14775.herokuapp.com/adminaccess')
             .then(res => res.json())
             .then(data => {
                 setGetAdminInfo(data)

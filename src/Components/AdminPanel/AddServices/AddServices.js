@@ -33,9 +33,10 @@ const AddServices = () => {
             formData.append('file', file);
             formData.append('name', info.name);
             formData.append('description', info.description);
-            fetch('http://localhost:5000/addservices', {
+            fetch('https://quiet-garden-14775.herokuapp.com/addservices', {
                 method: 'POST',
                 body: formData
+                // body: JSON.stringify(formData)
             })
                 .then(response => response.json())
                 .then(data => {

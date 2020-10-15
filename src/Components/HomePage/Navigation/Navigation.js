@@ -23,7 +23,7 @@ const Navigation = () => {
                         <NavLink className="text-decoration-none font-weight-bold text-dark mx-3 my-2" to="/contact">Contact Us</NavLink>
                         {
                             loggedInUser.emailVerified ?
-                                <p className="font-weight-bold text-dark mt-2 px-3 d-inline mx-3" style={{ cursor: "pointer" }} onClick={() => history.push('/sevicelist')}>{loggedInUser.displayName}</p>
+                                <p className="font-weight-bold text-dark mt-2 px-3 d-inline mx-3" style={{ cursor: "pointer" }} onClick={() => history.push('/servicelist')}>{loggedInUser.displayName}</p>
 
                                 : <button className='btn btn-dark px-5 mx-3 my-2' onClick={() => history.push('/login')}>Login</button>
                         }

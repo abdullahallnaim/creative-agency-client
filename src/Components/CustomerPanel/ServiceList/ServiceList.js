@@ -2,42 +2,35 @@ import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import { UserContext } from '../../../App';
-import logo from '../../../logos/logo.png';
+import DashBoardHeader from '../../DashBoarderHeader/DashBoardHeader';
 import CustomerDashBoard from '../CustomerDashBoard/CustomerDashBoard';
 
 const ServiceList = () => {
+    document.title = 'Service List'
     const { loggedIn } = useContext(UserContext);
     const [loggedInUser, setLoggedInUser] = loggedIn;
-    const [showOrder, setShowData] = useState([])
+    const [showService, setShowServices] = useState([])
     useEffect(() => {
         fetch('https://quiet-garden-14775.herokuapp.com/getorderinfo?email=' + loggedInUser.email)
             .then(res => res.json())
-            .then(data => setShowData(data))
+            .then(data => setShowServices(data))
 
     }, [])
     return (
         <>
-            <div className='d-flex justify-content-between mt-4'>
-                <div>
-                    <NavLink to="/" style={{}} className='ml-4'>
-                        <img style={{ width: '170px', heigth: '56px' }} src={logo} alt="" />
-                    </NavLink>
-                </div>
-                <p className='col-md-2'> <img style={{ width: '30px', height: '30px' }} src={loggedInUser.photoURL} alt="" /> {loggedInUser.displayName}</p>
-            </div>
-            <div className='row'>
-                <div className='col-md-2 ml-4'>
+            <DashBoardHeader></DashBoardHeader>
+            <div className="row">
+                <div className='col-md-3 col-lg-2 col-10 ml-4 mb-4'>
                     <CustomerDashBoard></CustomerDashBoard>
                 </div>
-                <div className='col-md-9 col-7 mx-auto mt-4'>
+                <div className='col-md-8 col-lg-9 col-8 mx-auto'>
                     <h3 className='mb-4'>Service List</h3>
-                    <h2>You have ordered:{showOrder.length} services</h2>
+                    <h2>You have ordered:{showService.length} services</h2>
                     <div className="row d-flex justify-content-center">
                         {
-                            showOrder.map(data =>
-                                <div className="col-md-5 col-8 m-4 shadow p-3 mb-5 bg-white rounded" id='service'>
+                            showService.map(data =>
+                                <div className="col-md-8 col-lg-5 col-12 m-4 shadow p-3 mb-5 bg-white rounded" id='service'>
                                     <div className='row d-flex justify-content-between'>
                                         <img style={{ width: '80px', display: 'block', marginLeft:'20px'}} src={`data:/png;base64,${data.image.img}`} alt="" />
                                         <button className='btn btn-danger mr-3' style={{ height: '40px' }}>Pending</button>

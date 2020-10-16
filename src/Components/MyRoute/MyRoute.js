@@ -20,12 +20,12 @@ const MyRoute = () => {
             <Route exact path="/login" component={Login} />
             <Route exact path="/adminlogin" component={AdminLogin} />
             <AdminRoute exact path="/admin" component={Admin} />
-            <PrivateRoute exact path="/servicelist" component={ServiceList} />
-            <PrivateRoute exact path="/order" component={CustomerOrder} />
-            <PrivateRoute exact path="/review" component={Review} />
             <AdminRoute exact path="/admin-serviceslist" component={ShowServicesList} />
             <AdminRoute exact path="/admin-makeadmin" component={MakeAdmin} />
             <AdminRoute exact path="/admin-addservices" component={AddServices} />
+            <PrivateRoute exact path="/servicelist" component={ServiceList} />
+            <PrivateRoute exact path="/order" component={CustomerOrder} />
+            <PrivateRoute exact path="/review" component={Review} />
         </BrowserRouter>
     );
 };

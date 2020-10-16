@@ -11,7 +11,7 @@ const ClientsFeedBack = () => {
             .then(data => setShowReviewData(data))
     }, [])
     return (
-        <div className="" style={{ marginTop: '90px' }}>
+        <div style={{ marginTop: '90px' }}>
             <div style={{ margin: '60px' }}>
                 <h4 className='text-center font-weight-bold' >Clients <p className='text-success d-inline font-weight-bold'>Feedback</p></h4>
             </div>
@@ -25,7 +25,7 @@ const ClientsFeedBack = () => {
                 </div>
                 {
                     showReviewData.map(data =>
-                        <div className="col-md-3 col-8 m-4 shadow p-3 mb-5 bg-white rounded">
+                        <div className="col-md-4 col-lg-3 border col-8 m-4 p-3 mb-5 rounded">
                             <div className='d-flex'>
                                 {
                                 data.photo.image?

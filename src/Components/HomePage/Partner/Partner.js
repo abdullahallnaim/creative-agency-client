@@ -8,21 +8,21 @@ import airnb from '../../../logos/airbnb.png'
 const Partner = () => {
     return (
         <div className='container' style={{margin:'100px auto'}}>
-            <div className='row d-flex justify-content-center'>
-                <div className="col-">
-                    <img style={{width:'100px', marginRight:'60px'}} src={slack} alt=""/>
+            <div className='row  d-flex justify-content-center'>
+                <div className="col-5 col-md-4 col-lg-2 m-3">
+                    <img style={{width:'120px'}} src={slack} alt=""/>
                 </div>
-                <div className="col-">
-                    <img style={{width:'100px', marginRight:'60px'}} src={google} alt=""/>
+                <div className="col-5 col-md-4 col-lg-2 m-3">
+                    <img style={{width:'120px'}} src={google} alt=""/>
                 </div>
-                <div className="col-">
-                    <img style={{width:'100px', marginRight:'60px'}} src={uber} alt=""/>
+                <div className="col-5 col-md-4 col-lg-2 m-3">
+                    <img style={{width:'120px'}} src={uber} alt=""/>
                 </div>
-                <div className="col-">
-                    <img style={{width:'100px', marginRight:'60px'}} src={netflix} alt=""/>
+                <div className="col-5 col-md-4 col-lg-2 m-3">
+                    <img style={{width:'120px'}} src={netflix} alt=""/>
                 </div>
-                <div className="col-">
-                    <img style={{width:'100px'}} src={airnb} alt=""/>
+                <div className="col-5 col-md-4 col-lg-2 m-3">
+                    <img style={{width:'120px'}} src={airnb} alt=""/>
                 </div>
             </div>
         </div>

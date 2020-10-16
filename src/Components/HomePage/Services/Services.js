@@ -8,8 +8,8 @@ import './Services.css'
 import AOS from 'aos';
 
 AOS.init({
-    duration : 2000
-  });
+    duration: 2000
+});
 
 const Services = () => {
     const history = useHistory()
@@ -39,7 +39,7 @@ const Services = () => {
                     }
                 </div>
                 {
-                    showAddedServices.map(data => <div className="col-md-3 col-8 m-4 shadow p-3 mb-5 bg-white rounded text-center" id="services" data-aos="flip-left" style={{ cursor: 'pointer' }} onClick={() => handleClick(data)}>
+                    showAddedServices.map(data => <div className="col-md-4 col-lg-3 col-8 m-4 shadow p-3 mb-5 bg-white rounded text-center" id="services" data-aos="flip-left" style={{ cursor: 'pointer' }} onClick={() => handleClick(data)}>
                         <img style={{ width: '80px', display: 'block', margin: 'auto' }} src={`data:/png;base64,${data.image.img}`} alt="" />
                         <h5 className='font-weight-bold my-3'>{data.name}</h5>
                         <p className='text-secondary'>{data.description}</p>

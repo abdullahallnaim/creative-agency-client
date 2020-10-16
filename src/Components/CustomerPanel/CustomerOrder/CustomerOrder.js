@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import logo from '../../../logos/logo.png';
 import CustomerDashBoard from '../../CustomerPanel/CustomerDashBoard/CustomerDashBoard';
+import DashBoardHeader from '../../DashBoarderHeader/DashBoardHeader';
 
 const CustomerOrder = () => {
     const { loggedIn, services } = useContext(UserContext)
@@ -14,7 +15,7 @@ const CustomerOrder = () => {
         projectDetails: '',
         servicePrice: ''
     })
-    const handleEvent = (newtask) => {
+    const handleEvent = () => {
         const price = document.getElementById('price').value
         const projectName = document.getElementById('project-name').value
         const projectDetails = document.getElementById('project-details').value
@@ -49,21 +50,12 @@ const CustomerOrder = () => {
     }
     return (
         <>
-            <div className='d-flex justify-content-between mt-4'>
-                <div className='d-flex'>
-                    <div>
-                        <NavLink to="/" style={{}} className='ml-3'>
-                            <img style={{ width: '170px', heigth: '56px', marginLeft: '10px' }} src={logo} alt="" />
-                        </NavLink>
-                    </div>
-                </div>
-                <p className='col-md-2'><img style={{ width: '30px', height: '30px' }} src={loggedInUser.photoURL} alt="" /> {loggedInUser.displayName}</p>
-            </div>
-            <div className='row'>
-                <div className='col-md-2 ml-4'>
+            <DashBoardHeader></DashBoardHeader>
+            <div className="row">
+                <div className='col-md-3 col-lg-2 col-10 ml-4 mb-4'>
                     <CustomerDashBoard></CustomerDashBoard>
                 </div>
-                <div className='col-md-9 col-7 mx-auto mt-4'>
+                <div className='col-md-8 col-lg-9 col-8 mx-auto'>
                     <h3 className='mb-4'>Order</h3>
                     <form className='row' onSubmit={handleSubmit}>
                         <div class="form-group col-md-8">
@@ -82,7 +74,7 @@ const CustomerOrder = () => {
                         <div class="form-group col-md-8 mr-5">
                             <input type="text" class="form-control" onBlur={handleEvent} id='price' placeholder="Price" />
                         </div>
-                        <button class="btn btn-dark col-md-5 ml-2">Submit</button>
+                        <button class="btn btn-dark col-md-5 ml-2">Send</button>
                     </form>
                 </div>
             </div>

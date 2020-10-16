@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../../logos/logo.png';
 
 const Admin = () => {
+    document.title = 'Admin Page';
     const { loggedIn, services } = useContext(UserContext)
     const [loggedInUser, setLoggedInUser] = loggedIn
     return (

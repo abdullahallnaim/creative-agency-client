@@ -1,18 +1,14 @@
 import { Button } from '@material-ui/core';
 import React from 'react';
 import { useState } from 'react';
-import { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
-import { UserContext } from '../../../App';
-import logo from '../../../logos/logo.png';
 import CustomerDashBoard from '../CustomerDashBoard/CustomerDashBoard';
 import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DashBoardHeader from '../../DashBoarderHeader/DashBoardHeader';
+
 
 const Review = () => {
-    document.title = 'Add Event';
-    const { loggedIn, services } = useContext(UserContext)
-    const [loggedInUser, setLoggedInUser] = loggedIn
+    document.title = 'Add Review';
     const [reviewInfo, setReviewInfo] = useState({});
     const [reviewerImage, setReviewerImage] = useState(null);
     const handleBlur = e => {
@@ -57,19 +53,12 @@ const Review = () => {
     }
     return (
         <>
-            <div className='d-flex justify-content-between mt-4'>
-                    <div>
-                        <NavLink to="/" style={{}} className='ml-4'>
-                            <img style={{ width: '170px', heigth: '56px' }} src={logo} alt="" />
-                        </NavLink>
-                    </div>
-                <p className='col-md-2'> <img style={{ width: '30px', height: '30px' }} src={loggedInUser.photoURL} alt="" /> {loggedInUser.displayName}</p>
-            </div>
-            <div className='row'>
-                <div className='col-md-2 ml-4'>
+            <DashBoardHeader></DashBoardHeader>
+            <div className="row">
+                <div className='col-md-3 col-lg-2 col-10 ml-4 mb-4'>
                     <CustomerDashBoard></CustomerDashBoard>
                 </div>
-                <div className='col-md-9 col-7 mx-auto mt-4'>
+                <div className='col-md-8 col-lg-9 col-8 mx-auto'>
                     <h3 className='mb-4'>Review</h3>
                     <form className='row' onSubmit={handleSubmit}>
                         <div className = "form-group col-md-8">
@@ -81,13 +70,13 @@ const Review = () => {
                         <div className = "form-group col-md-8">
                             <textarea className = "form-control" onBlur={handleBlur} name='description' id="description" rows="5" placeholder='Description'></textarea>
                         </div>
-                        <div className = "form-group col-md-7">
+                        <div className = "form-group col-md-6">
                             <Button
                                 className=''
                                 variant="contained"
                                 component="label"
-                                style={{ height: '50px' }}>
-                                <FontAwesomeIcon className='mx-3' icon={faCloudUploadAlt} />
+                                style={{ height: '50px', width:'280px'}}>
+                                <FontAwesomeIcon className='ml-4 mr-2' icon={faCloudUploadAlt} />
                                 <input
                                     id='image'
                                     type="file"
@@ -96,7 +85,7 @@ const Review = () => {
                                 />
                             </Button>
                         </div>
-                        <button className = "btn btn-dark col-md-8 ml-2">Send</button>
+                        <button className = "btn btn-dark col-md-8 ml-2">Submit</button>
                     </form>
                 </div>
             </div>

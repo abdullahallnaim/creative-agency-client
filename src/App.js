@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import MyRoute from './Components/MyRoute/MyRoute';
 import { useState } from 'react';
@@ -10,7 +9,7 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   const [addService, setAddService] = useState({})
   return (
-    <UserContext.Provider value={ {loggedIn:[loggedInUser, setLoggedInUser],services:[addService, setAddService]}}>
+    <UserContext.Provider value={ {loggedIn:[loggedInUser, setLoggedInUser],services:[addService, setAddService]} }>
       <MyRoute></MyRoute>
     </UserContext.Provider>
   );

@@ -6,21 +6,20 @@ import Header from '../Header/Header';
 import Navigation from '../Navigation/Navigation';
 import Partner from '../Partner/Partner';
 import Services from '../Services/Services';
+import './Home.css'
 
 const Home = () => {
     return (
         <>
-            <div style={{ backgroundColor: '#FBD062' }}>
+            <div className='home-bg'>
                 <Navigation></Navigation>
                 <Header></Header>
             </div>
-            <div>
                 <Partner></Partner>
                 <Services></Services>
                 <CarouselSlide></CarouselSlide>
                 <ClientsFeedBack></ClientsFeedBack>
                 <Footer></Footer>
-            </div>
         </>
     );
 };

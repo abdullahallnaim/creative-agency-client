@@ -1,17 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import logo from '../../../logos/logo.png';
-import { UserContext } from '../../../App';
-import { useContext } from 'react';
 import AdminDashBoard from '../AdminDashBoard/AdminDashBoard';
 import { Button } from '@material-ui/core';
 import { faCloudUploadAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from 'react';
+import DashBoardHeader from '../../DashBoarderHeader/DashBoardHeader';
 
 const AddServices = () => {
-    const { loggedIn, services } = useContext(UserContext)
-    const [loggedInUser, setLoggedInUser] = loggedIn
+    document.title = 'Add New Service';
     const [info, setInfo] = useState({});
     const [file, setFile] = useState(null);
     const handleBlur = e => {
@@ -36,7 +32,6 @@ const AddServices = () => {
             fetch('https://quiet-garden-14775.herokuapp.com/addservices', {
                 method: 'POST',
                 body: formData
-                // body: JSON.stringify(formData)
             })
                 .then(response => response.json())
                 .then(data => {
@@ -56,35 +51,26 @@ const AddServices = () => {
 
     return (
         <>
-            <div className='d-flex justify-content-between mt-4'>
-                <div className='d-flex'>
-                    <div>
-                        <NavLink to="/" style={{}} className='ml-3'>
-                            <img style={{ width: '170px', heigth: '56px', marginLeft: '10px' }} src={logo} alt="" />
-                        </NavLink>
-                    </div>
-                </div>
-                <p className='col-md-2'><img style={{ width: '30px', height: '30px' }} src={loggedInUser.photoURL} alt="" /> {loggedInUser.displayName}</p>
-            </div>
-            <div className='row'>
-                <div className='col-md-2 ml-4'>
+            <DashBoardHeader></DashBoardHeader>
+            <div className="row">
+                <div className='col-md-4 col-lg-4 col-10'>
                     <AdminDashBoard></AdminDashBoard>
                 </div>
-                <div className='col-md-8 col-7 mx-auto mt-4'>
+                <div className='col-md-8 col-8 mt-5 mx-auto'>
                     <h3 className='mb-4'>Add New Service</h3>
                     <form className='row' onSubmit={handleSubmit}>
-                        <div className = "form-group col-md-6">
+                        <div className="form-group col-md-6">
                             <label htmlFor="" className='font-weight-bold'>Service Title</label>
-                            <input onBlur={handleBlur} type="text" className = "form-control d-block" id='name' name="name" placeholder="Service name" />
+                            <input onBlur={handleBlur} type="text" className="form-control d-block" id='name' name="name" placeholder="Service name" />
                         </div>
-                        <div className = "form-group col-md-5">
-                            <label htmlFor="" className='font-weight-bold'>Upload Service Icon</label>
+                        <div className="form-group col-md-5">
+                            <label htmlFor="" className='font-weight-bold'>Upload Service Icon</label> <br></br>
                             <Button
                                 className=''
                                 variant="contained"
                                 component="label"
-                                style={{ width: '300px', height: '40px' }}>
-                                <FontAwesomeIcon className='mx-2' icon={faCloudUploadAlt} />
+                                style={{}}>
+                                <FontAwesomeIcon className='mr-2' icon={faCloudUploadAlt} />
                                 <input
                                     id='image'
                                     type="file"
@@ -93,11 +79,11 @@ const AddServices = () => {
                                 />
                             </Button>
                         </div>
-                        <div className = "form-group col-md-8">
+                        <div className="form-group col-md-6">
                             <label htmlFor="" className='font-weight-bold'>Description</label>
-                            <textarea onBlur={handleBlur} className = "form-control" name='description' id="description" rows="5" placeholder='Description'></textarea>
-                        </div>
-                        <button type="submit" className = "btn btn-success ml-3 px-3 col-md-5" onClick={(e) => handleSubmit(e)}>Submit</button>
+                            <textarea onBlur={handleBlur} className="form-control" name='description' id="description" rows="5" placeholder='Description'></textarea>
+                        </div> <br />
+                        <button type="submit" className="btn btn-success ml-3 px-3 col-md-6" onClick={(e) => handleSubmit(e)}>Submit</button>
                     </form>
                 </div>
             </div>

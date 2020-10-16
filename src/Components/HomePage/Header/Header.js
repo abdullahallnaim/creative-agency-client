@@ -2,7 +2,6 @@ import React from 'react';
 import frame from '../../../logos/Frame.png'
 
 const Header = () => {
-
     return (
         <div className='container mt-5'>
             <div className='row  d-flex justify-content-center align-items-center'>

@@ -17,10 +17,10 @@ const Navigation = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
-                        <NavLink className="text-decoration-none font-weight-bold text-dark mx-3 my-2" to="/home">Home</NavLink>
-                        <NavLink className="text-decoration-none font-weight-bold text-dark mx-3 my-2" to="/donation">Our Portfolio</NavLink>
-                        <NavLink className="text-decoration-none font-weight-bold text-dark mx-3 my-2" to="/teams">Our Team</NavLink>
-                        <NavLink className="text-decoration-none font-weight-bold text-dark mx-3 my-2" to="/contact">Contact Us</NavLink>
+                        <NavLink className="text-decoration-none font-weight-bold text-dark mx-3 my-2" to="/">Home</NavLink>
+                        <a className="text-decoration-none font-weight-bold text-dark mx-3 my-2" href="#portfolio">Our Portfolio</a>
+                        <a className="text-decoration-none font-weight-bold text-dark mx-3 my-2" to="/">Our Team</a>
+                        <a className="text-decoration-none font-weight-bold text-dark mx-3 my-2" href="#contact-form">Contact Us</a>
                         {
                             loggedInUser.emailVerified ?
                                 <NavLink className="text-decoration-none font-weight-bold text-dark mx-3 my-2" to="/servicelist">{loggedInUser.displayName}</NavLink>

@@ -25,7 +25,7 @@ const ClientsFeedBack = () => {
                 </div>
                 {
                     showReviewData.map(data =>
-                        <div className="col-md-4 col-lg-3 border col-8 m-4 p-3 mb-5 rounded">
+                        <div className="col-md-4 col-lg-3 border col-8 m-4 p-3 mb-5 rounded" data-aos="flip-left">
                             <div className='d-flex'>
                                 {
                                 data.photo.image?

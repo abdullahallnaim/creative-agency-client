@@ -16,7 +16,7 @@ let slides = [
 ];
 
 const CarouselSlide = () => (
-    <div className='my-4 text-white' style={{ backgroundColor: '#111430', padding: "40px" }}>
+    <div className='my-4 text-white' id='portfolio' style={{ backgroundColor: '#111430', padding: "40px" }}>
         <h3 className='p-4 text-center'>Here are some of <h3 className='text-success d-inline'>our works</h3></h3>
         <Carousel slides={slides} autoplay={true} interval={1000} />
     </div>

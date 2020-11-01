@@ -23,11 +23,11 @@ const Footer = () => {
         <div style={{ backgroundColor: '#FBD062', marginTop: '50px', paddingBottom: '50px'}}>
             <div className='container pt-5'>
                 <div className='row'>
-                    <div className='col-md-6 col-12 text-left'>
+                    <div className='col-md-6 col-12 text-left' data-aos='fade-right'>
                         <h1 className='font-weight-bold'>Let Us Handle Your<br />project, professionally</h1>
                         <p className='text-dark'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis ipsa corporis dignissimos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, veritatis?</p>
                     </div>
-                    <div className='col-md-6 col-12'>
+                    <div className='col-md-6 col-12' data-aos='fade-left'>
                         <form className='text-left' id='contact-form'  onSubmit={handleSubmit}>
                             <div className = "form-group text-left">
                                 <input type="email" className = "form-control" id="email" name='f_email' aria-describedby="emailHelp" placeholder="Your emai address" />

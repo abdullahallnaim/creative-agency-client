@@ -50,7 +50,6 @@ const Login = () => {
                 </div>
                 <p id='hi' style={{display: 'none'}}>hi there</p>
             </div>
-            
         </div>
     );
 };

@@ -16,6 +16,7 @@
     "@testing-library/user-event": "^7.2.1",
     "aos": "^2.3.4",
     "bootstrap": "^4.5.2",
+    "emailjs-com": "^2.6.3",
     "firebase": "^7.23.0",
     "jquery": "^3.5.1",
     "material-auto-rotating-carousel": "^3.0.2",

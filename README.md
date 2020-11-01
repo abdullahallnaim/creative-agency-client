@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Description
@@ -64,3 +65,18 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+## Details about this project:
+### `Description : ` 
+    1. This is a simple react appication for an agency who serves different services Like web design, graphics design, node applications, web site development etc.
+    2. Customers can order for any of the given services and write review if they are satisfied or not 
+    3. When any customer click for any services if he/she is not logged in then it will redirect to login page. then after logged in they can order for that service.
+    4. once he/she is logged in then they can easily order and give a review if they are satisfied or not.
+    5. customers can upload an image of their own and it will be shown in the website home page.
+    6. Customers can see how many services they have added in the showlist page. 
+    7. When admin will logged in they can easily add new services and can see how many customers are logged in and what they order for
+    8. when someone click for admin login the user must give his email id and if the given email doesnot match with the database the user cannot go to the admin panel
+    9. An admin can make someone admin and the email will be saved in databsae
+### `Technology :`  `Reactjs, React-Router, Context-API, Nodejs, Express js, MongoDB, Material UI, Bootstrap, Firebase-Authentication.` <br />
+### `Live Website Link :`(https://creative-agency1.web.app/).
+>>>>>>> cfb7d84d2ad6a4285b8a92e3572c202fab21689e
